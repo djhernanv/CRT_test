@@ -1,0 +1,42 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Questionnaire
+{% endblock %}
+
+{% block content %}
+<hr>
+
+<div class="card">
+<div class="card-header text-white bg-primary mb-3"> Please answer the following questions:</div>
+<div class="card-body">
+<ol type="1"> <!-- This starts a numbered list -->
+
+
+   <li> If you’re running a race and you pass the person in second
+        place, what place are you in?
+       {% formfield player.crt_1 label="" %} </li>
+
+   <li> A farmer had 15 sheep and all but 8 died. How many
+        are left?
+       {% formfield player.crt_2 label="" %} </li>
+
+    <li> Emily’s father has three daughters. The first two are
+    named April and May. What is the third daughter’s
+    name?
+       {% formfield player.crt_3 label="" %} </li>
+
+    <li> How many cubic meter of dirt are there in a hole that is 3m
+        deep x 3m x 3m long?
+       {% formfield player.crt_4 label="" %} </li>
+
+</ol>
+
+</div>
+</div>
+
+<br>
+    {% next_button %}
+
+{% endblock %}
